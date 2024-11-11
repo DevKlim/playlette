@@ -1,0 +1,27 @@
+name: playlette
+channels:
+  - conda-forge
+  - pytorch
+  - defaults
+dependencies:
+  - python=3.12
+  - pip=24.2
+  - jupyterlab
+  - ipywidgets
+  - matplotlib
+  - matplotlib-inline
+  - seaborn
+  - numpy
+  - polars             # Replaces pandas
+  - scikit-learn
+  - pytorch           # Core PyTorch library
+  - torchvision       # For image-related operations
+  - torchaudio        # For audio processing
+  - spotipy           # For Spotify API interactions
+  - flask             # For deploying the Flask API
+  - tqdm              # Progress bar utility
+  - requests
+  - requests-oauthlib # For handling OAuth with Spotify API
+  - pydantic          # Data validation and settings management
+  - PyYAML            # YAML parsing
+  - otter-grader==3.1.4  # Installed via pip

@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    container_name: playlette_app
+    ports:
+      - "5000:5000"   # Flask
+      - "8888:8888"   # Jupyter Lab
+    volumes:
+      - .:/usr/src/app
+    env_file:
+      - .env
+    restart: unless-stopped
