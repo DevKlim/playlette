@@ -1,4 +1,4 @@
-# Use the base image (e.g., Miniconda or Mambaforge)
+# Use the Mambaforge image as the base
 FROM condaforge/mambaforge:latest
 
 # Set work directory
@@ -16,12 +16,12 @@ SHELL ["conda", "run", "-n", "playlette", "/bin/bash", "-c"]
 # Copy the application code
 COPY . .
 
-# Expose ports
-EXPOSE 5000 8888
-
 # Copy and set permissions for the startup script
 COPY start.sh /start.sh
 RUN chmod +x /start.sh
+
+# Expose ports
+EXPOSE 5000 8888
 
 # Start the application
 CMD ["/start.sh"]
