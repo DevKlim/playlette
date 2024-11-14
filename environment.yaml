@@ -21,4 +21,5 @@ dependencies:
   - requests-oauthlib
   - pydantic
   - PyYAML
+  - pyarrow
   - pip
